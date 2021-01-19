@@ -27,6 +27,8 @@ for column in excel_data['Full Name'].tolist():
     # takes message from excel
 
     message = excel_data['Arb Message'][0]
+
+
     message = message.replace('{بيب}',
                               str(excel_data['BIB Number'][count]))
     message = message.replace('{arabic_run_distance}',
@@ -49,13 +51,12 @@ for column in excel_data['Full Name'].tolist():
             click_btn = WebDriverWait(driver,
                     delay).until(EC.element_to_be_clickable((By.CLASS_NAME,
                                  '_2Ujuu')))
-        except (UnexpectedAlertPresentException,
-                NoAlertPresentException), e:
-            print 'alert present'
+        except (UnexpectedAlertPresentException, NoAlertPresentException) as e:
+            print ('alert present')
             Alert(driver).accept()
         sleep(1)
         click_btn.click()
         sleep(3)
-        print 'Message sent to: ' + number
-    except Exception, e:
-        print 'Failed to send message to ' + number + str(e)
+        print ('Message sent to: ' + number)
+    except Exception as e:
+        print ('Failed to send message to ' + number + str(e))
