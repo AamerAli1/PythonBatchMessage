@@ -19,7 +19,7 @@ driver.get('https://web.whatsapp.com')
 count = 0
 delay = 30
 
-excel_data = pandas.read_excel('test2.xlsx', sheet_name='Sheet1')
+excel_data = pandas.read_excel('JRR Marathon - King ِAbdulAziz Road (Responses).xlsx', sheet_name='Responses')
 input('Press ENTER after login into Whatsapp Web and your chats are visiable.'
       )
 for column in excel_data['Full Name'].tolist():
