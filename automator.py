@@ -29,8 +29,8 @@ for column in excel_data['Full Name'].tolist():
     message = excel_data['Arb Message'][0]
     message = message.replace('{بيب}',
                               str(excel_data['BIB Number'][count]))
-    message = message.replace('arabic_run_distance}',
-                              str(excel_data['{Arabic Run Distance}'
+    message = message.replace('{arabic_run_distance}',
+                              str(excel_data['Arabic Run Distance'
                               ][count]))
 
     # message = message.replace('{bib_ number}', str(excel_data['BIB Number'][count]))
